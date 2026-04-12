@@ -6,6 +6,10 @@
 	(paper "A5")
 	(title_block
 		(title "DeltaBot Schematic")
+		(date "2026-04-12")
+		(rev "2")
+		(company "Bernd Porr")
+		(comment 1 "GPL")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x03"

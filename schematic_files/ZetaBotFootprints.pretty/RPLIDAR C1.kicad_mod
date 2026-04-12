@@ -1,13 +1,13 @@
 (footprint "RPLIDAR C1"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
-	(property "Reference" "U1"
+	(property "Reference" "REF**"
 		(at 0 -3.5 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "b1d626ab-ab7e-4833-9186-b4c4f04d2db7")
+		(uuid "7834c279-f5be-48c0-a02e-76b48fcbbb9b")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -20,7 +20,7 @@
 		(at 0 0 0)
 		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "c02d9533-a220-4b5c-a9aa-c974ecd76cfa")
+		(uuid "ea21f43e-2792-4254-9fe1-56518dc8d645")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -33,7 +33,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "95ff95d8-674b-4872-a711-a0325c188143")
+		(uuid "00fdcf37-bfe6-487e-95d4-1530c0b97d2e")
 		(effects
 			(font
 				(size 1 1)
@@ -46,7 +46,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "bc46a858-c59d-4f5c-85d7-abc7152283db")
+		(uuid "396cb8c8-d2e6-42c7-beaa-f0efcb546c5a")
 		(effects
 			(font
 				(size 1 1)
@@ -55,6 +55,7 @@
 		)
 	)
 	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_rect
 		(start -27.8 -27.8)
 		(end 27.8 27.8)
@@ -64,7 +65,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "0b42d3f2-0436-4206-ad61-6c27d0214b14")
+		(uuid "6a864db8-c7ee-49f3-8f6d-a1e734a8b7a6")
 	)
 	(pad "" np_thru_hole circle
 		(at -21.5 -21.5)
@@ -72,7 +73,7 @@
 		(drill 3)
 		(layers "*.Cu")
 		(thermal_bridge_angle 90)
-		(uuid "59d34735-b5a8-4cfd-995a-450e7e77d66b")
+		(uuid "57201d93-fb63-47dd-8420-0b623d8961e2")
 	)
 	(pad "" np_thru_hole circle
 		(at -21.5 21.5)
@@ -80,7 +81,7 @@
 		(drill 3)
 		(layers "*.Cu")
 		(thermal_bridge_angle 90)
-		(uuid "42779bd4-e227-46aa-a68d-211a5a78b243")
+		(uuid "c877e78c-f4ec-4064-8c16-5706d3a3d354")
 	)
 	(pad "" np_thru_hole circle
 		(at 21.5 -21.5)
@@ -88,7 +89,7 @@
 		(drill 3)
 		(layers "*.Cu")
 		(thermal_bridge_angle 90)
-		(uuid "58f27b34-6b0c-4998-8c6a-b17ef7415e99")
+		(uuid "e3d25822-a57c-407e-b841-8e0cbe81d1d4")
 	)
 	(pad "" np_thru_hole circle
 		(at 21.5 21.5)
@@ -96,11 +97,7 @@
 		(drill 3)
 		(layers "*.Cu")
 		(thermal_bridge_angle 90)
-		(uuid "10edbed3-391a-4c3a-9a11-be17eef2e486")
-	)
-	(group ""
-		(uuid "5a656170-5e7e-450e-8e12-d7ed02eb6f63")
-		(members "b1d626ab-ab7e-4833-9186-b4c4f04d2db7" "c02d9533-a220-4b5c-a9aa-c974ecd76cfa")
+		(uuid "49e493eb-cefc-4bab-9995-5c3fa045ffd2")
 	)
 	(embedded_fonts no)
 )
