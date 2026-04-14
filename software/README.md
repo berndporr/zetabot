@@ -1,39 +1,4 @@
-# C++ Alphabot API for the Raspberry PI
-
-This page provides instructions how to customise the alphabot so that it's actually
-usable for research and it provides a C++ API with proper setters and callbacks.
-
-![alt tag](robot.jpg)
-
-C++ class to control the basic functionality of a customised Alphabot
-(https://www.waveshare.com/wiki/AlphaBot) with a Raspberry PI:
-
- - Motor control (using the Parallax Continuous Rotation Servo)
- - Battery voltage
-
-## Hardware mods
-
-### Parallax Continuous Rotation Servos
-
-Throw the original DC motors in the bin and fit the [Parallax Continuous Rotation Servo](https://www.parallax.com/product/parallax-continuous-rotation-servo/) with 90deg brackets. Plug them into the servo ports S1 and S2.
-
-Wire up the pin header:
-
-![alt tag](header.jpg)
-
-```
-GPIO18 / PWM2 = S1 = Motor left
-GPIO19 / PWM3 = S2 = Motor right
-```
-
-### Voltage regulator
-
-De-solder the LM2596 and throw it in the bin. It supposed to have a dropout voltage of 1V so that the 7-7.2V from the battery
-should be fine but it seems to be more 2V. It's not even recommended by TI who recommend the LMR33630 for new designs.
-
-Replace the LM2596 with a [MGS100505](https://onecall.farnell.com/cosel/mgs100505/dc-dc-converter-5v-2a/dp/4296076). Just glue it upside down on the PCB and run 4 wires to Vin and +5V.
-
-## Software prerequisites
+# C++ ZetaBot API for the Raspberry PI
 
 Add to `/boot/firmware/config.txt`:
 
