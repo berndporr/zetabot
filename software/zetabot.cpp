@@ -3,13 +3,13 @@
 #include <iostream>
 #include <unistd.h>
 
-void AlphaBot::start(long _samplingInterval)
+void ZetaBot::start()
 {
     left_wheel_pwm.start(2, pwmfrequ);
     right_wheel_pwm.start(3, pwmfrequ);
 }
 
-void AlphaBot::stop()
+void ZetaBot::stop()
 {
     if ((leftWheelSpeed > 0) || (rightWheelSpeed > 0))
     {
@@ -24,7 +24,7 @@ void AlphaBot::stop()
     }
 }
 
-void AlphaBot::setRightWheelSpeed(float speed)
+void ZetaBot::setRightWheelSpeed(float speed)
 {
     speed = -speed;
     if (speed < -1)
@@ -35,7 +35,7 @@ void AlphaBot::setRightWheelSpeed(float speed)
     right_wheel_pwm.setDutyCycleNanosecs(speed2nanosec(speed));
 }
 
-void AlphaBot::setLeftWheelSpeed(float speed)
+void ZetaBot::setLeftWheelSpeed(float speed)
 {
     if (speed < -1)
         speed = -1;

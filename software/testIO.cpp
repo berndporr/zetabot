@@ -1,30 +1,14 @@
-#include "alphabot.h"
+#include "zetabot.h"
 #include <ncurses.h>
 #include <iostream>
 
 int running = 1;
 
-// callback every 100ms
-class DisplaySensorCallback : public AlphaBot::BatteryCallback
-{
-public:
-	virtual void hasBatteryVoltage(float v)
-	{
-		char tmp[256];
-		sprintf(tmp,
-			"Power = %1.1f Volt    ",v);
-		mvaddstr(3, 0, tmp);
-		refresh();
-	}
-};
-
 int main(int, char **)
 {
-	AlphaBot alphabot;
-	DisplaySensorCallback displaySensorCallback;
-	alphabot.registerBatteryCallback(&displaySensorCallback);
+	ZetaBot zetabot;
 	try {
-		alphabot.start();
+		zetabot.start();
 	} catch (const char* tmp) {
 		fprintf(stderr,"%s\n",tmp);
 		abort();
@@ -49,7 +33,7 @@ int main(int, char **)
 
 		case 'l':
 			l = l + 0.1f;
-			alphabot.setLeftWheelSpeed(l);
+			zetabot.setLeftWheelSpeed(l);
 			sprintf(tmp, "Increasing right speed to %f         ", l);
 			mvaddstr(6, 0, tmp);
 			refresh();
@@ -57,7 +41,7 @@ int main(int, char **)
 
 		case 'r':
 			r = r + 0.1f;
-			alphabot.setRightWheelSpeed(r);
+			zetabot.setRightWheelSpeed(r);
 			sprintf(tmp, "Increasing right speed to %f         ", r);
 			mvaddstr(6, 0, tmp);
 			refresh();
@@ -66,8 +50,8 @@ int main(int, char **)
 		case 'b':
 			l = l - 0.05f;
 			r = r - 0.05f;
-			alphabot.setLeftWheelSpeed(l);
-			alphabot.setRightWheelSpeed(r);
+			zetabot.setLeftWheelSpeed(l);
+			zetabot.setRightWheelSpeed(r);
 			sprintf(tmp,"Backwards       l=%f, r=%f                     ",l,r);
 			mvaddstr(6, 0, tmp);
 			refresh();
@@ -76,8 +60,8 @@ int main(int, char **)
 		case 'f':
 			l = l + 0.05f;
 			r = r + 0.05f;
-			alphabot.setLeftWheelSpeed(l);
-			alphabot.setRightWheelSpeed(r);
+			zetabot.setLeftWheelSpeed(l);
+			zetabot.setRightWheelSpeed(r);
 			sprintf(tmp,"Forwards       l=%f, r=%f                     ",l,r);
 			mvaddstr(6, 0, tmp);
 			refresh();
@@ -86,8 +70,8 @@ int main(int, char **)
 		case ' ':
 			l = 0;
 			r = 0;
-			alphabot.setLeftWheelSpeed(l);
-			alphabot.setRightWheelSpeed(r);
+			zetabot.setLeftWheelSpeed(l);
+			zetabot.setRightWheelSpeed(r);
 			mvaddstr(6, 0, "Stopping                            ");
 			refresh();
 			break;
@@ -96,6 +80,6 @@ int main(int, char **)
 			break;
 		}
 	}
-	alphabot.stop();
+	zetabot.stop();
 	endwin();
 }
