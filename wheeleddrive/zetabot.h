@@ -67,15 +67,18 @@ struct GPIO
 class ZetaBot
 {
 public:
+    /**
+     * Starts the PWM
+     **/
     void start();
 
     /**
-     * Stops the callbacks about the battery level and shuts down the GPIO/PWM.
+     * Shuts down the GPIO/PWM.
      */
     void stop();
 
     /**
-     * Destroys the Alpha Bot object and stops any communication
+     * Destroys the Alpha Bot object
      */
     ~ZetaBot()
     {

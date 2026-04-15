@@ -57,6 +57,10 @@ sudo make install
 
 ## Usage
 
+### Starting
+
+Create an instance of ZetaBot and call start() to start the PWM on the motors.
+
 ### Motor speed
 
 Setting the speeds of the left/right wheels:
@@ -65,6 +69,10 @@ setLeftWheelSpeed(float speed);
 setRightWheelSpeed(float speed);
 ```
 where speed is between -1 and +1.
+
+### Stopping
+
+call stop() to stop the motors and to disable PWM.
 
 ## Demo programs
 
