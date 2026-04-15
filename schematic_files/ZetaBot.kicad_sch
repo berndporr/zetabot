@@ -3955,7 +3955,7 @@
 		)
 		(uuid "ff89df3e-c57e-425d-9ed2-7664630caf14")
 	)
-	(global_label "PWM_L"
+	(global_label "PWM_R"
 		(shape input)
 		(at 179.07 52.07 0)
 		(effects
@@ -3999,7 +3999,7 @@
 			)
 		)
 	)
-	(global_label "PWM_L"
+	(global_label "PWM_R"
 		(shape input)
 		(at 68.58 116.84 180)
 		(effects
@@ -4021,7 +4021,7 @@
 			)
 		)
 	)
-	(global_label "PWM_R"
+	(global_label "PWM_L"
 		(shape input)
 		(at 101.6 78.74 180)
 		(effects
@@ -4043,7 +4043,7 @@
 			)
 		)
 	)
-	(global_label "PWM_R"
+	(global_label "PWM_L"
 		(shape input)
 		(at 68.58 92.71 180)
 		(effects
