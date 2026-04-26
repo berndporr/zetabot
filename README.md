@@ -7,9 +7,9 @@ What is the Zeta-Bot?
 The Zeta-Bot is an open-source robot platform that uses the:
 
  - Raspberry PI 5,
- - Parallax's Continuous Rotation Servo Motors,
- - C1 LIDAR and
- - two Raspberry PI V2 cameras for stereo vision.
+ - [Parallax's Continuous Rotation Servo Motors](https://www.parallax.com/product/parallax-continuous-rotation-servo/),
+ - [C1 LIDAR](https://www.slamtec.com/en/c1) and
+ - two [Raspberry PI V2 cameras](https://www.raspberrypi.com/products/camera-module-v2/) for stereo vision.
 
 ## Hardware
 
