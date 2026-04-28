@@ -17,10 +17,7 @@ struct GPIO
          gpiod::line::direction direction)
     {
         pinNo = GPIOpinNo;
-        const int chipNo = 0;
-        // const std::string chipPath = std::format("/dev/gpiochip{}", chipNo);
-        // const std::string consumername = std::format("gpioconsumer_{}_{}", chipNo, pinNo);
-        
+        const int chipNo = 0;        
         const std::string chipPath = std::string("/dev/gpiochip")+std::to_string(chipNo);
         const std::string consumername = std::string("gpioconsumer_")+std::to_string(chipNo)+std::string("_")+std::to_string(pinNo);
 
