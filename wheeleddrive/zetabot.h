@@ -3,13 +3,12 @@
  * Apache License 2.0
  **/
 
-#ifndef ALPHABOT_H
-#define ALPHABOT_H
+#ifndef ZETABOT_H
+#define ZETABOT_H
 
 #include <thread>
 #include <sys/time.h>
 #include <gpiod.hpp>
-
 #include "rpi_pwm.h"
 
 struct GPIO
@@ -19,8 +18,12 @@ struct GPIO
     {
         pinNo = GPIOpinNo;
         const int chipNo = 0;
-        const std::string chipPath = std::format("/dev/gpiochip{}", chipNo);
-        const std::string consumername = std::format("gpioconsumer_{}_{}", chipNo, pinNo);
+        // const std::string chipPath = std::format("/dev/gpiochip{}", chipNo);
+        // const std::string consumername = std::format("gpioconsumer_{}_{}", chipNo, pinNo);
+        
+        const std::string chipPath = std::string("/dev/gpiochip")+std::to_string(chipNo);
+        const std::string consumername = std::string("gpioconsumer_")+std::to_string(chipNo)+std::string("_")+std::to_string(pinNo);
+
 
         // Config the pin as input and detecting falling and rising edegs
         gpiod::line_config line_cfg;
