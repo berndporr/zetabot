@@ -98,8 +98,8 @@ public:
     void setRightWheelSpeed(float speed);
 
 private:
-    static constexpr int PWM_CHANNEL_MOTORL = 2;
-    static constexpr int PWM_CHANNEL_MOTORR = 3;
+    static constexpr int PWM_CHANNEL_MOTORL = 3;
+    static constexpr int PWM_CHANNEL_MOTORR = 2;
 
     static constexpr float pwmfrequ = 50; // Hz
     static constexpr float motor_rest_pulseduration_ns = 1.5 * 1E6;
