@@ -34,7 +34,7 @@ int main(int, char **)
 		case 'l':
 			l = l + 0.1f;
 			zetabot.setLeftWheelSpeed(l);
-			sprintf(tmp, "Increasing right speed to %f         ", l);
+			sprintf(tmp, "Increasing left speed to %f         ", l);
 			mvaddstr(6, 0, tmp);
 			refresh();
 			break;
