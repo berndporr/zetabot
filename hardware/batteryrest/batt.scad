@@ -12,19 +12,19 @@ difference() {
     linear_extrude(height = 2)
     square([w, h], center = true);
 
-    translate([xhole,yhole,0])
+    translate([xhole,yhole,-1])
     linear_extrude(height = 20)
     circle(2);
 
-    translate([-xhole,yhole,0])
+    translate([-xhole,yhole,-1])
     linear_extrude(height = 20)
     circle(2);
 
-    translate([-xhole,-yhole,0])
+    translate([-xhole,-yhole,-1])
     linear_extrude(height = 20)
     circle(2);
     
-    translate([xhole,-yhole,0])
+    translate([xhole,-yhole,-1])
     linear_extrude(height = 20)
     circle(2);    
 }
