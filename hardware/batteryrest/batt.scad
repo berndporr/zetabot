@@ -17,7 +17,10 @@ xhole = 29;
 yhole = 24.5;
 
 // diameter of the drillhole
-drilldiam = 2.75;
+drilldiam = 3;
+
+// countersunk
+countersunk = 1;
 
 // diameter of the post
 postdiam = 6;
@@ -32,18 +35,19 @@ difference() {
         square([w, h], center = true);
         translate([xhole,yhole,0])
         linear_extrude(height = postheight + thickness)
-        circle(d=postdiam);    
+        square(postdiam,true);    
         translate([-xhole,yhole,0])
         linear_extrude(height = postheight + thickness)
-        circle(d=postdiam);
+        square(postdiam,true);    
         translate([xhole,-yhole,0])
         linear_extrude(height = postheight + thickness)
-        circle(d=postdiam);    
+        square(postdiam,true);    
         translate([-xhole,-yhole,0])
         linear_extrude(height = postheight + thickness)
-        circle(d=postdiam);    
+        square(postdiam,true);    
     }
 
+    // drillholes
     translate([xhole,yhole,-1])
     linear_extrude(height = postheight + thickness + 2)
     circle(d=drilldiam);
@@ -59,4 +63,22 @@ difference() {
     translate([xhole,-yhole,-1])
     linear_extrude(height = postheight + thickness + 2)
     circle(d=drilldiam);    
+
+    // countersunk
+    translate([xhole,yhole,-1])
+    linear_extrude(height = 1 + countersunk)
+    circle(d=postdiam);
+
+    translate([-xhole,yhole,-1])
+    linear_extrude(height = 1 + countersunk)
+    circle(d=postdiam);
+
+    translate([-xhole,-yhole,-1])
+    linear_extrude(height = 1 + countersunk)
+    circle(d=postdiam);
+
+    translate([xhole,-yhole,-1])
+    linear_extrude(height = 1 + countersunk)
+    circle(d=postdiam);
+
 }
