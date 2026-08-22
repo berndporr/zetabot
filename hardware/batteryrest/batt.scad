@@ -20,7 +20,7 @@ yhole = 24.5;
 drilldiam = 2.75;
 
 // diameter of the post
-postdiam = 4;
+postdiam = 6;
 
 // height of the post
 postheight = 3;
@@ -32,31 +32,31 @@ difference() {
         square([w, h], center = true);
         translate([xhole,yhole,0])
         linear_extrude(height = postheight + thickness)
-        circle(postdiam);    
+        circle(d=postdiam);    
         translate([-xhole,yhole,0])
         linear_extrude(height = postheight + thickness)
-        circle(postdiam);
+        circle(d=postdiam);
         translate([xhole,-yhole,0])
         linear_extrude(height = postheight + thickness)
-        circle(postdiam);    
+        circle(d=postdiam);    
         translate([-xhole,-yhole,0])
         linear_extrude(height = postheight + thickness)
-        circle(postdiam);    
+        circle(d=postdiam);    
     }
 
     translate([xhole,yhole,-1])
     linear_extrude(height = postheight + thickness + 2)
-    circle(drilldiam);
+    circle(d=drilldiam);
 
     translate([-xhole,yhole,-1])
     linear_extrude(height = postheight + thickness + 2)
-    circle(drilldiam);
+    circle(d=drilldiam);
 
     translate([-xhole,-yhole,-1])
     linear_extrude(height = postheight + thickness + 2)
-    circle(drilldiam);
+    circle(d=drilldiam);
     
     translate([xhole,-yhole,-1])
     linear_extrude(height = postheight + thickness + 2)
-    circle(drilldiam);    
+    circle(d=drilldiam);    
 }
