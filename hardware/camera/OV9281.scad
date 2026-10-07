@@ -1,20 +1,20 @@
-// picamera mounting board
+// OV9281 mounting board
 // (c) 2026 Bernd Porr
 
 // width of the board
-w = 25;
+w = 32;
 
 // height of the board
-h = 16.5;
+h = 16;
 
 // thickness of the board
 thickness = 2;
 
 // x coord of the drillhole
-xhole = 10.5;
+xhole = 14.0;
 
 // y coord of the drillhole
-yhole = 6.25;
+yhole = 6;
 
 // diameter of the drillhole
 drilldiam = 2;
