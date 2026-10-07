@@ -5,7 +5,7 @@
 w = 32;
 
 // height of the board
-h = 16;
+h = 18;
 
 // thickness of the board
 thickness = 2;
@@ -14,7 +14,7 @@ thickness = 2;
 xhole = 14.0;
 
 // y coord of the drillhole
-yhole = 6;
+yhole = 7;
 
 // diameter of the drillhole
 drilldiam = 2;
@@ -52,13 +52,5 @@ difference() {
     translate([-xhole,yhole,-1])
     linear_extrude(height = postheight + thickness + 2)
     circle(d=drilldiam);
-
-    translate([-xhole,-yhole,-1])
-    linear_extrude(height = postheight + thickness + 2)
-    circle(d=drilldiam);
-    
-    translate([xhole,-yhole,-1])
-    linear_extrude(height = postheight + thickness + 2)
-    circle(d=drilldiam);    
 
 }
