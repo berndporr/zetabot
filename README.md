@@ -9,7 +9,7 @@ The Zeta-Bot is an open-source robot platform that uses the:
  - Raspberry PI 5,
  - [Parallax's Continuous Rotation Servo Motors](https://www.parallax.com/product/parallax-continuous-rotation-servo/),
  - [C1 LIDAR](https://www.slamtec.com/en/c1),
- - two [Raspberry PI V2 cameras](https://www.raspberrypi.com/products/camera-module-v2/) for stereo vision,
+ - [OV9281 global shutter camera](https://www.inno-maker.com/product/cam-mipi9281raw-v2/)
  - [a standard mobile phone 1700mAh power bank](https://uk.rs-online.com/web/p/power-banks/2498449).
 
 It's based on years and years of experience making single PCB
@@ -23,11 +23,9 @@ The KiCad design files and BOM are in [hardware](hardware).
 
 ## Software
 
-It's all in C++! Both cameras and LIDAR have an event driven framework with callbacks so no loops and multi-threaded by design.
-
- - The motor control libraries are in [wheeleddrive](wheeleddrive).
- - The cameras driver is in https://github.com/berndporr/libcamera2opencv with a demo to display one camera and in [stereo](stereo) is a QT6 based stereo viewer and disparity detector.
- - The LIDAR driver is in https://github.com/berndporr/c1lidar
+ - Motor control libraries: [wheeleddrive](wheeleddrive).
+ - Camera driver: https://github.com/berndporr/libcamera2opencv with a demo to display the camera image.
+ - LIDAR driver: https://github.com/berndporr/c1lidar
 
 ## Credits
 
